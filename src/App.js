@@ -1,15 +1,18 @@
+import CategoriesSection from "./Component/CategoriesSection";
 
-const categories=[{}]
+const categories = [
+  { id: 1, title: "JavaScript", imageUrl: "" },
+  { id: 2, title: "Python", imageUrl: "" },
+  { id: 3, title: "PHP", imageUrl: "" },
+  { id: 4, title: "GraphQL", imageUrl: "" },
+  { id: 5, title: "React.JS", imageUrl: "" },
+  { id: 6, title: "CSS", imageUrl: "" },
+];
+
 function App() {
-  return <div categories-container>
-<div className="category-container">
-  
-  <span className="category-image" style={{backgroundImage:'url()'}}></span>
-  <span className="category-title">Java Script
-
-  </span>
-</div>
-  </div>;
+  return (
+   <CategoriesSection categories={categories}/>
+  );
 }
 
 export default App;
