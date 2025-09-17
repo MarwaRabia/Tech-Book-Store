@@ -1,0 +1,54 @@
+.app-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    height: 100px;
+    border-bottom: 2px solid #000;
+    background: #FF9729;
+    padding: 0 100px;
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    .left-side-link, .right-side-link{
+        display: inline-flex;
+        padding: 0px 15px 0px 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 52px;
+        height: 70%;
+
+        .nav-link{
+            line-height: 0;
+            transition: .3s all ease-in-out;
+            &:hover{
+                color:#2e2e2e;
+                text-shadow: 2px 1px 1px black;
+            }
+
+            svg{
+                transition: .3s all ease-in-out;
+
+            &:hover{
+                filter: drop-shadow(2px 1px 1px black);
+                fill: #2e2e2e;
+            }
+            }
+        }
+        
+    }
+
+    .logo-container{
+        width: 20%;
+        min-width: 200px;
+        height: 70%;
+        
+        .logo{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
