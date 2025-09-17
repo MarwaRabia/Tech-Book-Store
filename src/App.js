@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 
+const categories=[{}]
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div categories-container>
+<div className="category-container">
+  
+  <span className="category-image" style={{backgroundImage:'url()'}}></span>
+  <span className="category-title">Java Script
+
+  </span>
+</div>
+  </div>;
 }
 
 export default App;
