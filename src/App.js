@@ -1,17 +1,20 @@
-import CategoriesSection from "./Component/CategoriesSection";
+import Home from "./routes/Home";
+import { Routes, Route } from "react-router-dom";
+import NavFooter from './routes/NavFooter.js';
 
-const categories = [
-  { id: 1, title: "JavaScript", imageUrl: "" },
-  { id: 2, title: "Python", imageUrl: "" },
-  { id: 3, title: "PHP", imageUrl: "" },
-  { id: 4, title: "GraphQL", imageUrl: "" },
-  { id: 5, title: "React.JS", imageUrl: "" },
-  { id: 6, title: "CSS", imageUrl: "" },
-];
+function Cart() {
+  return <h1>your are in cart page</h1>;
+}
 
 function App() {
   return (
-   <CategoriesSection categories={categories}/>
+    <Routes>
+      <Route path="/" element={<NavFooter />}>
+        <Route index={true} element={<Home />} />
+        {/* <Route path="home" element={<Home />} /> */}
+        <Route path="cart" element={<Cart />} />
+      </Route>
+    </Routes>
   );
 }
 

@@ -1,0 +1,27 @@
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 50px;
+
+  .section-title {
+    color: #292929;
+    text-shadow: 0px 4px 4px rgba(178, 90, 79, 0.25);
+    font-family: Jockey One;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .categories-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 5%;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
