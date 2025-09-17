@@ -1,0 +1,33 @@
+.category-container {
+  width: 75%;
+  min-width: 270px;
+  padding: 15px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  border-radius: 42px;
+  border: 2px solid #000;
+  background: #ffd203;
+  box-shadow: 8px 8px 0px 0px #000;
+
+  .category-image {
+    width: 80px;
+    height: 80px;
+    display: block;
+
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 4px 4px 0px 0px #000;
+  }
+
+  .category-title {
+    color: #43464e;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
