@@ -23,10 +23,10 @@ A modern **online book store** built with **React**, featuring dynamic book sear
 ![Home Page](src/assets/home.jpg)  
 ### - Categories
 ----
-![Categories](src/assets/Categories.jpg)  
+![Categories](src/assets/categories.jpg)  
 ### - Checkout
 ----
-![Cart](src/assets/Cart.jpg)
+![Cart](src/assets/cart.jpg)
 
 ---
 
