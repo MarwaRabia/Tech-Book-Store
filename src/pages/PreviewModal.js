@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "./previewModal.scss";
+import toast from "react-hot-toast";
 
 function getBookPrice(book) {
   const amount = book.saleInfo?.retailPrice?.amount;
@@ -31,10 +32,16 @@ export default function PreviewModal({ book, onClose }) {
     const item = {
       id: book.id,
       title: book.volumeInfo.title,
-      image: book.volumeInfo.imageLinks?.thumbnail,
+      image:
+        book.volumeInfo.imageLinks?.thumbnail ||
+        "https://cdn.iconscout.com/icon/premium/png-512-thumb/programming-icon-svg-download-png-2473012.png?f=webp&w=512",
+
       price: price,
     };
     addToCart(item, quantity);
+    toast.success("Added to cart!", {
+      position: "bottom-center",
+    });
     onClose();
   }
 
@@ -45,7 +52,10 @@ export default function PreviewModal({ book, onClose }) {
           ✖
         </button>
         <img
-          src={info.imageLinks?.thumbnail}
+          src={
+            info.imageLinks?.thumbnail ||
+            "https://cdn.iconscout.com/icon/premium/png-512-thumb/programming-icon-svg-download-png-2473012.png?f=webp&w=512"
+          }
           alt={info.title}
           className="modal-image"
         />

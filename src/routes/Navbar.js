@@ -17,9 +17,11 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
+  // const [showIcon, setShowIcon] = useState(false);
 
   const cartRef = useRef();
   const logoutRef = useRef();
+  // const iconRef = useRef();
 
   //  Close cart or logout when clicking outside
   useEffect(() => {
@@ -30,6 +32,9 @@ function Navbar() {
       if (logoutRef.current && !logoutRef.current.contains(e.target)) {
         setShowLogout(false);
       }
+      // if (iconRef.current && !iconRef.current.contains(e.target)) {
+      //   setMenuOpen(false);
+      // }
     }
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
@@ -58,12 +63,16 @@ function Navbar() {
         <Logo className="logo" />
       </Link>
 
-      <button
-        className="menu-toggle"
-        onClick={() => setMenuOpen((prev) => !prev)}
-      >
-        ☰
-      </button>
+      {/* <div className="menu"> */}
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          ☰
+                  {totalItems > 0 && <span className="cart-counter-menu">{totalItems}</span>}
+
+        </button>
+      {/* </div> */}
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <div className="left-side-link">
@@ -84,7 +93,6 @@ function Navbar() {
         </div>
 
         <div className="right-side-link">
-        
           <div className="cart-wrapper" ref={cartRef}>
             <button
               onClick={() => setOpen((s) => !s)}

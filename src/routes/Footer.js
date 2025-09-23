@@ -1,7 +1,30 @@
 import "./SCSS/footer.scss";
 import toast from "react-hot-toast";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [showButton, setShowButton] = useState(false);
+
+  // Show button after scrolling down 300px
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -46,6 +69,20 @@ function Footer() {
       <div className="footer-bottom">
         <p>© 2025 TechBooks. All rights reserved. built by Marwa Rabia</p>
       </div>
+      {/* {showButton && (
+        <button className="back-to-top" onClick={scrollToTop}>
+          ↑
+        </button>
+      )} */}
+
+      {showButton && (
+  <button className="back-to-top" onClick={scrollToTop}>
+    <img
+      src="https://cdn.iconscout.com/icon/premium/png-512-thumb/up-arrow-icon-svg-download-png-16581.png?f=webp&w=512"
+      alt="Up"
+    />
+  </button>
+)}
     </footer>
   );
 }

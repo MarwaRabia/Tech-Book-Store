@@ -4,6 +4,7 @@ import "./featuredSlider.scss";
 import { useCart } from "../../context/CartContext.js";
 import PreviewModal from "../../pages/PreviewModal.js";
 import { getFromCache, setToCache } from "../../services/cache.js";
+import toast from "react-hot-toast";
 
 function getBookPrice(book) {
   const amount = book.saleInfo?.retailPrice?.amount;
@@ -32,11 +33,9 @@ function FeaturedSlider({ query, title }) {
 
       const data = await fetchBooks(query);
 
-      
       if (Array.isArray(data) && data.length > 0) {
-      setToCache(query, data);
-    }
-
+        setToCache(query, data);
+      }
 
       setBooks(data);
       setLoading(false);
@@ -53,10 +52,16 @@ function FeaturedSlider({ query, title }) {
     const item = {
       id: book.id,
       title: book.volumeInfo.title,
-      image: book.volumeInfo.imageLinks?.thumbnail,
+      image:
+        book.volumeInfo.imageLinks?.thumbnail ||
+        "https://cdn.iconscout.com/icon/premium/png-512-thumb/programming-icon-svg-download-png-2473012.png?f=webp&w=512",
       price: price,
     };
+    toast.success("Added to cart!", {
+  position: "bottom-center",
+});
     addToCart(item, 1);
+
   }
 
   return (

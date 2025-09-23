@@ -6,6 +6,7 @@ import "./categoryPage.scss";
 import { useCart } from "../../context/CartContext.js";
 import PreviewModal from "../PreviewModal.js";
 import { getFromCache, setToCache } from "../../services/cache.js";
+import toast from "react-hot-toast";
 
 function getBookPrice(book) {
   const amount = book.saleInfo?.retailPrice?.amount;
@@ -30,9 +31,15 @@ function CategoryPage({ searchQuery }) {
     const item = {
       id: book.id,
       title: book.volumeInfo.title,
-      image: book.volumeInfo.imageLinks?.thumbnail,
+      image:
+        book.volumeInfo.imageLinks?.thumbnail ||
+        "https://cdn.iconscout.com/icon/premium/png-512-thumb/programming-icon-svg-download-png-2473012.png?f=webp&w=512",
+
       price: price,
     };
+    toast.success("Added to cart!", {
+      position: "bottom-center",
+    });
     addToCart(item, 1);
   }
 

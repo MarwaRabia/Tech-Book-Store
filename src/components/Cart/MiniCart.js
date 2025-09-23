@@ -39,7 +39,6 @@ export default function MiniCart({ onClose }) {
                 <div className="mini-info">
                   <div className="mini-title">{it.title}</div>
                   <div className="mini-qty">
-                    {/* x{it.quantity} • {it.price} EGP */}
                     <p>
                       <span>price:</span> {it.price} EGP
                     </p>
