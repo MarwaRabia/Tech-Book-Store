@@ -1,0 +1,121 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+.cart-button {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.mini-cart {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 50;
+  font-size: 1rem;
+
+  .cart-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    h4 {
+      align-self: center;
+      margin-bottom: -0.5rem;
+    }
+    button {
+      // background-color: #ff2c2c;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+.empty-cart {
+  width: 100%;
+  height: 100%;
+  margin: 50px auto;
+}
+.mini-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 240px;
+  overflow: auto;
+}
+.mini-title {
+  font-weight: bold;
+}
+.mini-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0;
+}
+.mini-qty p {
+  margin: 5px;
+  color: rgb(71, 150, 219);
+  font-weight: bold;
+  span {
+    font-weight: normal;
+    color: #898686;
+  }
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal .card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.mini-footer {
+  padding: 12px;
+  background-color: #e1e8fa;
+  margin: -12px;
+  margin-top: 0;
+  text-align: center;
+  .mini-total {
+    margin: 10px;
+    color: rgb(71, 150, 219);
+    font-size: 1.3rem;
+
+    font-weight: 900;
+    span {
+      font-weight: bold;
+      color: #898686;
+    }
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

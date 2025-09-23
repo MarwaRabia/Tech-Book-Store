@@ -1,0 +1,36 @@
+.page-content {
+  .signup-section {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+    
+
+ button {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 18px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover 
+{
+          background: #0056b3;
+        }
+      }
+    }
+  }
+}

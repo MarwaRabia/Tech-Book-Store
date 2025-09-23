@@ -1,0 +1,58 @@
+Folder PATH listing for volume S
+Volume serial number is C0000100 0F70:17F8
+G:.
+³   App.css
+³   App.js
+³   App.test.js
+³   index.css
+³   index.js
+³   logo.svg
+³   reportWebVitals.js
+³   setupTests.js
+³   structure.txt
+³   Table.js
+³   table.scss
+³   
+ÃÄÄÄassets
+³       cart.svg
+³       Logo.svg
+³       
+ÃÄÄÄComponent
+³       cart.scss
+³       CategoriesSection.js
+³       CategoryItem.js
+³       categoryItem.scss
+³       CategoryPage.js
+³       categoryPage.scss
+³       categorySection.scss
+³       checkout.scss
+³       CheckoutPage.js
+³       MiniCart.js
+³       
+ÃÄÄÄcontext
+³       CartContext.js
+³       
+ÃÄÄÄroutes
+³   ³   banner.scss
+³   ³   Footer.js
+³   ³   footer.scss
+³   ³   Home.js
+³   ³   home.scss
+³   ³   Navbar.js
+³   ³   NavFooter.js
+³   ³   NavFooter.scss
+³   ³   SearchPage.js
+³   ³   TopBanner.js
+³   ³   
+³   ÃÄÄÄsignIn
+³   ³       SignIn.js
+³   ³       signin.scss
+³   ³       
+³   ÀÄÄÄsignup
+³           SignUp.js
+³           signup.scss
+³           
+ÀÄÄÄutils
+        firebase.js
+        googleBooks.js.js
+        

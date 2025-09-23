@@ -1,0 +1,79 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+
+  .modal-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .modal-image {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+    .buy-card-title {
+      font-size: 1.5rem;
+      margin-top: 0;
+      padding: 1rem;
+    }
+    .quantity-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 15px 0;
+      border: none;
+    }
+    .price {
+      font-family: fantasy;
+      font-size: 1.2rem;
+    }
+    span {
+      font-family: bold;
+      font-size: 1.5rem;
+    }
+    .quantity {
+      border: none;
+      font-size: 1.5rem;
+      padding: 0 0.8rem;
+     
+      color: white;
+    }
+     .quantity:first-child{
+       background: rgb(241, 59, 59);
+
+     }
+     .quantity:last-child{
+       background: rgb(22, 203, 22);
+
+     }
+    .add-to-cart {
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+}
